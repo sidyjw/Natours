@@ -91,8 +91,7 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -115,7 +114,7 @@ body {
   display: inline-block;
   height: 100%;
   /* Essa porcentagem tem como referencia a
-                  Altura e largura total do elemento */
+                    Altura e largura total do elemento */
   width: 100%;
   border-radius: 10rem;
   z-index: -1;
