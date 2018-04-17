@@ -123,13 +123,12 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777; }
-
-.btn--white::after {
-  content: " ";
-  background: #fff;
-  position: absolute;
-  top: 0;
-  left: 0; }
+  .btn--white::after {
+    content: " ";
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0; }
 
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);

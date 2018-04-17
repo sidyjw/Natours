@@ -174,15 +174,17 @@ body {
   &--white {
     background-color: $cor-branca;
     color: $cor-cinza-escuro;
+
+    &::after {
+      content: " ";
+      background: $cor-branca;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
   
-  &--white::after {
-    content: " ";
-    background: $cor-branca;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+  
   
   &:hover::after {
     transform: scaleX(1.4) scaleY(1.6); /* O scale aumenta o tamanho do elemento*/
