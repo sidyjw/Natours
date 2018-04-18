@@ -104,6 +104,10 @@ body {
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    /* O scale aumenta o tamanho do elemento*/
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-1px);
@@ -129,11 +133,6 @@ body {
     position: absolute;
     top: 0;
     left: 0; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  /* O scale aumenta o tamanho do elemento*/
-  opacity: 0; }
 
 .btn--animated {
   animation: moveBottom 1s ease-out 0.75s;

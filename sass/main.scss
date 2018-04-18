@@ -153,6 +153,11 @@ body {
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba($cor-preto, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6); /* O scale aumenta o tamanho do elemento*/
+      opacity: 0;
+    }
   }
   
   &:active {
@@ -182,13 +187,6 @@ body {
       top: 0;
       left: 0;
     }
-  }
-  
-  
-  
-  &:hover::after {
-    transform: scaleX(1.4) scaleY(1.6); /* O scale aumenta o tamanho do elemento*/
-    opacity: 0;
   }
   
   &--animated {
