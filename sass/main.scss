@@ -1,3 +1,14 @@
+@import "abstracts/_functions.scss";
+@import "abstracts/_mixins.scss";
+@import "abstracts/_variables.scss";
+
+@import "base/_animations.scss";
+@import "base/_base.scss";
+@import "base/typography";
+@import "base/_utilities.scss";
+
+@import "pages/home";
+
 $cor-pri: #55c57a;
 $cor-pri-clara: #7ed56f;
 $cor-pri-escura: #28b485;
@@ -38,7 +49,7 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
-  
+
   &__logo-box {
     position: absolute;
     top: 4rem;
@@ -58,11 +69,6 @@ body {
   }
 }
 
-
-
-
-
-
 .heading-primary {
   color: $cor-branca;
   text-transform: uppercase;
@@ -80,7 +86,7 @@ body {
     animation-duration: 2s;
     animation-timing-function: ease-out;
   }
-  
+
   &--sub {
     display: block;
     font-size: 2rem;
@@ -89,8 +95,6 @@ body {
     animation: moveInRight 2s ease-out;
   }
 }
-
-
 
 @keyframes moveInLeft {
   0% {
@@ -135,9 +139,7 @@ body {
   }
 }
 
-
-.btn{
-
+.btn {
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -159,12 +161,12 @@ body {
       opacity: 0;
     }
   }
-  
+
   &:active {
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($cor-preto, 0.2);
   }
-  
+
   &::after {
     content: " ";
     display: inline-block;
@@ -175,7 +177,7 @@ body {
     z-index: -1;
     transition: all 0.4s;
   }
-  
+
   &--white {
     background-color: $cor-branca;
     color: $cor-cinza-escuro;
@@ -188,7 +190,7 @@ body {
       left: 0;
     }
   }
-  
+
   &--animated {
     animation: moveBottom 1s ease-out 0.75s;
     animation-fill-mode: backwards; /*Irá aplicar o valor inicial da animação antes dela começar*/
