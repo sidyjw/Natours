@@ -1,0 +1,10 @@
+.row {
+  max-width: $grid-width;
+  background-color: #eee;
+  margin: 0 auto;
+  
+  
+  &:not(:last-child){//O pseudo seletor not() seleciona todos os elementos menos o que for especificado nele
+    margin-bottom: $gutter-vertical;//Esse atributo vei para cá, pois assim ele será aplicado a todos os elementos, menos o ultimo filho  
+  }
+}
