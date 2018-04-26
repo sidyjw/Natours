@@ -4,10 +4,11 @@
 
 @import "base/_animations.scss";
 @import "base/_base.scss";
-@import "base/typography";
+@import "base/_typography.scss";
 @import "base/_utilities.scss";
 
 @import "components/_buttons.scss";
+@import "components/_composition.scss";
 
 @import "layout/_header.scss";
 @import "layout/_grid-test.scss";
