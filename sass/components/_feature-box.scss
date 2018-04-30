@@ -1,0 +1,26 @@
+.feature-box{
+    background-color: rgba($cor-branca, .7);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($cor-preto, .15);
+    transition: transform 250ms; 
+    
+    &__icon{
+        font-size: 6rem;
+        margin-bottom: .5rem;
+        display: inline-block;
+        background-image: linear-gradient(to right, $cor-pri-clara, $cor-pri-escura);
+        -webkit-background-clip: text; // Isso faz com que o background seja encaixado dentro do texto
+        color: transparent; //Visto que o texto fica sobrepondo o background. É necessario deixar o texto transparente para assim o background ser visto
+    }
+
+    &:hover{
+        transform: translateY(-1.5rem) scale(1.03);
+    }
+
+    &__text{
+
+    }
+}
