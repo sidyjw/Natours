@@ -27,6 +27,12 @@
             &-1{
                 background-image: linear-gradient(to right bottom, $cor-sec-clara, $cor-sec-escura);  
             }
+            &-2{
+                background-image: linear-gradient(to right bottom, $cor-pri-clara, $cor-pri-escura);
+            }
+            &-3{
+                background-image: linear-gradient(to right bottom, $cor-tec-clara, $cor-tec-escura);
+            }
         }
     }
 
@@ -45,17 +51,20 @@
         background-blend-mode: screen;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        
         &--1{
               background-image: linear-gradient(to right bottom, $cor-sec-clara, $cor-sec-escura), url('../img/nat-5.jpg');  
 
         }
 
-        &--2{
-            background-image: url('../../img/nat-5.jpg')
+        &--2{ 
+            background-image: linear-gradient(to right bottom, $cor-pri-clara, $cor-pri-escura), url('../img/nat-6.jpg');
         }
 
         &--3{
-            background-image: url('../../img/nat-5.jpg')
+            background-image: linear-gradient(to right bottom, $cor-tec-clara, $cor-tec-escura), url('../img/nat-7.jpg');
         }
     }
     &__heading{
@@ -79,6 +88,16 @@
                               rgba($cor-sec-clara, .85), 
                               rgba($cor-sec-escura, .85))
         }
+        &--2{
+            background-image: linear-gradient(to right bottom, 
+                              rgba($cor-pri-clara, .85), 
+                              rgba($cor-pri-escura, .85))
+        }
+        &--3{
+            background-image: linear-gradient(to right bottom, 
+                              rgba($cor-tec-clara, .85), 
+                              rgba($cor-tec-escura, .85))
+        }
     }
     &__details{
         padding: 3rem;
@@ -98,6 +117,30 @@
                 }
             }
         }
+    }
+
+    //ESTILO PARTE DE TRÁS
+    &__cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+    &__price-box{
+        text-align: center;
+        color: $cor-branca;
+        margin-bottom: 8rem;
+        width: 90%;
+    }
+    &__price-only{
+        font-size: 1.4rem;
+        text-transform: uppercase;
+
+    }
+    &__price-value{
+        font-size: 6rem;
+        font-weight: 100;
     }
 }
 
