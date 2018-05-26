@@ -1,0 +1,42 @@
+.row {
+  max-width: $grid-width;
+  
+  margin: 0 auto;
+  
+  
+  &:not(:last-child){//O pseudo seletor not() seleciona todos os elementos menos o que for especificado nele
+    margin-bottom: $gutter-vertical;//Esse atributo vei para cá, pois assim ele será aplicado a todos os elementos, menos o ultimo filho 
+  }
+
+  @include clearfix;
+
+  [class^="col-"] {//Esse [] é o seletor de atributo e o ^ significa "começa com" o que foi inserido como valor do atributo
+    
+    float: left;
+    
+    &:not(:last-child){
+      margin-right: $gutter-horizontal;
+    }
+  }
+
+  .col-1-of-2 {
+    width: calc((100% - #{$gutter-horizontal}) / 2 ); //Para a variavel funcionar dentro do calc() é necessario colocar entre #{}
+  }
+
+  .col-1-of-3 {
+    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+    }
+  .col-2-of-3 {
+    width: calc( 2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+    }
+  
+  .col-1-of-4 {
+      width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+      }
+  .col-2-of-4 {
+      width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal} );
+      }
+  .col-3-of-4 {
+      width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+      }
+}
