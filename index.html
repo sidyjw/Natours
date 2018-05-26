@@ -12,6 +12,21 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
     <title>Natours | Passeios empolgantes para pessoas aventureiras</title>
+
+    <script>
+    const buttonLinks = document.querySelectorAll("a");
+ 
+    function preventLinkDefault(e) { 
+        e.preventDefault();
+    }
+     
+    buttonLinks.forEach(function(link) {
+       // Only applies the prevent default
+       // if the href attribute is set to "#"
+       if (link.getAttribute("href") === "#")
+           link.addEventListener("click", preventLinkDefault);
+    });
+    </script>
 </head>
 
 <body>
@@ -214,6 +229,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="u-center-text u-margin-top-huge">
+                <a href="#" class="btn btn--green">Veja todos os passeios</a>
             </div>
         </section>
     </main>

@@ -50,6 +50,19 @@
     }
   }
 
+  &--green {
+    background-color: $cor-pri;
+    color: $cor-branca;
+
+    &::after {
+      content: " ";
+      background: $cor-pri;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
   &--animated {
     animation: moveBottom 1s ease-out 0.75s;
     animation-fill-mode: backwards; /*Irá aplicar o valor inicial da animação antes dela começar*/
