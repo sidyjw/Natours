@@ -30,3 +30,25 @@
   position: relative;
   padding: 15rem 0;
 }
+
+.section-book{
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, $cor-pri-clara, $cor-pri-escura)
+}
+
+.book{//Usar o grandiente linear para criar um efeito de cores divídidas
+  background-image: linear-gradient(105deg, 
+                                    rgba($cor-branca, .9)0%,
+                                    rgba($cor-branca, .9)50%, 
+                                    transparent 50%), 
+                                    url(../img/nat-10.jpg);
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($cor-preto, 0.2);
+  height: 50rem;
+
+  &__form{
+    width: 50%;
+    padding: 6rem;
+  }
+}
